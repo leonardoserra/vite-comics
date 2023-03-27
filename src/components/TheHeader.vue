@@ -56,7 +56,7 @@ export default {
         <img class="logo" src="../assets/img/dc-logo.png" alt="logo" />
         <nav class="navbar-menu">
             <ol class="categories">
-                <li v-for="(links, i) in categories" key="i"><a :href="'href'">{{ links.category }}</a>
+                <li v-for="(links, i) in categories" :key="i"><a :href="'href'">{{ links.category }}</a>
                 </li>
             </ol>
         </nav>

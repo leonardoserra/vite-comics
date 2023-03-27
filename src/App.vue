@@ -36,7 +36,7 @@ export default {
 <style lang="scss">
 body {
   // debug
-  background-color: aqua;
+  background-color: black;
 
   main {
     height: 120px;

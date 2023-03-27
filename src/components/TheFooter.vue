@@ -14,7 +14,7 @@ export default {
                 },
                 {
                     category: 'DC',
-                    links: ['Terms Of Use', 'Privacy policy(New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptuons', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us']
+                    links: ['Terms Of Use', 'Privacy policy(New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshops', 'CPSC Certificates', 'Ratings', 'Shop Help', 'Contact Us']
                 },
                 {
                     category: 'SITES',
@@ -30,14 +30,18 @@ export default {
 
 <template>
     <div class="container">
-        <div class="footer-links">
-            <div class="category" v-for="(category, i) in categories" key="i">
-                <h3>{{ category.category }}</h3>
-                <ul>
-                    <li v-for="(links, c) in category.links"><a :href="category.links[c]">{{ category.links[c] }}</a></li>
-                </ul>
+        <div class="links-wrapper">
+            <div class="footer-links">
+                <div class="category" v-for="(category, i) in categories" :key="i">
+                    <h3>{{ category.category }}</h3>
+                    <ul>
+                        <li v-for="(links, c) in category.links"><a :href="category.links[c]">{{ category.links[c] }}</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+
         <div class="img-wrapper">
             <img class="logo-bg" src="../assets/img/dc-logo-bg.png" alt="logo-bg" />
         </div>
@@ -57,32 +61,42 @@ export default {
     background-size: cover;
     @include mixins.flex-around;
 
-    .footer-links {
-        @include mixins.flex-columns;
+    .links-wrapper {
         height: 100%;
-        width: 50%;
-        margin: 0 20px;
-        padding: 30px 60px;
+        margin-top: 150px;
+        width: 40%;
 
-        .category {
-            color: variables.$primary-color;
+        .footer-links {
+            @include mixins.flex-columns;
+            height: 100%;
+            margin: 0 20px;
+            padding: 30px;
+
+            .category {
+                margin: 0 20px;
+                margin-bottom: 20px;
+                color: variables.$primary-color;
 
 
-            li {
-                list-style: none;
+                li {
+                    list-style: none;
 
-                a {
-                    font-size: 10px;
-                    color: variables.$primary-color;
-                    text-decoration: none;
+                    a {
+                        font-size: 10px;
+                        color: lighten(variables.$secondary-color, $amount: 10);
+                        text-decoration: none;
 
-                    &:hover {
-                        border-bottom: 1px solid lighten(variables.$tertiary-color, $amount: 10);
+                        &:hover {
+                            border-bottom: 1px solid lighten(variables.$tertiary-color, $amount: 10);
+                            transition: border-bottom 0.03s linear;
+                        }
                     }
                 }
             }
         }
+
     }
+
 
 }
 </style>
