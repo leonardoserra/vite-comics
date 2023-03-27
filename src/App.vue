@@ -31,4 +31,9 @@ export default {
   <Banner />
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+body {
+  // debug
+  background-color: aqua;
+}
+</style>

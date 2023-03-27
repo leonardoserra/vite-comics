@@ -48,11 +48,13 @@ export default {
 
 <style lang="scss" scoped>
 @use "../styles/partials/_mixins.scss";
+@use "../styles/partials/_variables.scss";
 
 .container {
     @include mixins.flex-around;
     height: 80px;
     padding: 10px 0;
+    background-color: variables.$primary-color;
 
 
     .logo {
