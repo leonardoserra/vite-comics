@@ -63,7 +63,7 @@ export default {
 
     .links-wrapper {
         height: 100%;
-        margin-top: 150px;
+        margin-top: 45px;
         width: 40%;
 
         .footer-links {
