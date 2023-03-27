@@ -40,6 +40,14 @@ export default {
 }
 </script>
 
-<template></template>
+<template>
+    <div class="container">
+        <img src="../assets/img/dc-logo.png" alt="logo" />
+    </div>
+</template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container {
+    height: 50px;
+}
+</style>
