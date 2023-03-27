@@ -61,6 +61,10 @@ export default {
 
         .socials {
             @include mixins.flex-start;
+
+            .icon {
+                margin-left: 15px;
+            }
         }
 
 
@@ -77,7 +81,7 @@ export default {
             }
 
             &:active {
-                background-color: lighten(variables.$tertiary-color, $amount: 10);
+                background-color: variables.$tertiary-color;
                 transition: background-color 0.5s ease-in-out;
             }
 
@@ -90,8 +94,6 @@ export default {
         }
     }
 
-    .icon {
-        margin-left: 15px;
-    }
+
 }
 </style>
