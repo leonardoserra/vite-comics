@@ -54,7 +54,7 @@ export default {
 
 .container {
     overflow-y: hidden;
-    height: 400px;
+    height: 300px;
     background-image: url(../assets/img/footer-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -97,6 +97,11 @@ export default {
             }
         }
 
+
+    }
+
+    .logo-bg {
+        height: 390px;
     }
 
 

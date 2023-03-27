@@ -51,7 +51,7 @@ export default {
 @use "../styles/partials/_mixins.scss";
 
 .container {
-    height: 121px;
+    height: 101px;
     background-color: variables.$secondary-color;
     @include mixins.flex-around;
 

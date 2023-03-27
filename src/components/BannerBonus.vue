@@ -37,9 +37,11 @@ export default {
 
 <template>
     <div class="container">
-        <div class="card" v-for="card in items">
-            <img :src="card.icon" />
-            <h4 class="title">{{ card.title }}</h4>
+        <div class="card" v-for="(card, i) in items" :key="i">
+            <img :src="getImagePath(card.icon)" :alt="card.title" />
+            <a :href="card.title">
+                <h4 class="title">{{ card.title }}</h4>
+            </a>
         </div>
     </div>
 </template>
@@ -49,13 +51,22 @@ export default {
 @use "../styles/partials/_mixins.scss";
 
 .container {
-    height: 100px;
+    height: 120px;
     background-color: $tertiary-color;
     @include mixins.flex-center;
 
     .card {
+        height: 100%;
+        @include mixins.flex-center;
         margin: 0 35px;
         color: $primary-color;
+
+        img {
+            height: 30%;
+        }
+
+
+
 
         .title {
             font-size: .7rem;
