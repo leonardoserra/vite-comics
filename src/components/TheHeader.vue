@@ -4,34 +4,44 @@ export default {
         return {
             navbarSections: [
                 {
-                    category: 'CHARACTERS'
+                    category: 'CHARACTERS',
+                    href: '#'
                 },
                 {
-                    category: 'COMICS'
+                    category: 'COMICS',
+                    href: '#'
                 },
                 {
-                    category: 'MOVIES'
+                    category: 'MOVIES',
+                    href: '#'
                 },
                 {
-                    category: 'TV'
+                    category: 'TV',
+                    href: '#'
                 },
                 {
-                    category: 'GAMES'
+                    category: 'GAMES',
+                    href: '#'
                 },
                 {
-                    category: 'COLLECTIBLES'
+                    category: 'COLLECTIBLES',
+                    href: '#'
                 },
                 {
-                    category: 'VIDEOS'
+                    category: 'VIDEOS',
+                    href: '#'
                 },
                 {
-                    category: 'FANS'
+                    category: 'FANS',
+                    href: '#'
                 },
                 {
-                    category: 'NEWS'
+                    category: 'NEWS',
+                    href: '#'
                 },
                 {
-                    category: 'SHOP'
+                    category: 'SHOP',
+                    href: '#'
                 }
             ]
         }
@@ -43,6 +53,11 @@ export default {
 <template>
     <div class="container">
         <img class="logo" src="../assets/img/dc-logo.png" alt="logo" />
+        <nav class="navbar-menu">
+            <ol class="categories">
+                <li><a href="">ciao</a></li>
+            </ol>
+        </nav>
     </div>
 </template>
 
@@ -59,6 +74,31 @@ export default {
 
     .logo {
         height: 100%;
+    }
+
+    .categories {
+        list-style: none;
+
+        li {
+            padding: 20px;
+
+            a {
+                display: inline-block;
+                height: 80px;
+                line-height: 80px;
+                color: variables.$secondary-color;
+                text-decoration: none;
+
+                &:hover {
+                    color: variables.$tertiary-color;
+                    border-bottom: 5px solid lighten(variables.$tertiary-color, $amount: 15);
+                    transition: color .5s ease, border-bottom .03s linear;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+
     }
 }
 </style>
