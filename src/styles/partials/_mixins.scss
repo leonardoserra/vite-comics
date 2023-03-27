@@ -3,3 +3,9 @@
     justify-content: space-around;
     align-items: center;
 }
+
+@mixin flex-columns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}

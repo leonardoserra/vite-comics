@@ -26,6 +26,8 @@ export default {
   <TheHeader />
   <main>
 
+    Verra Aggiunto il Contenuto
+
   </main>
   <TheFooter />
   <Banner />
@@ -35,5 +37,9 @@ export default {
 body {
   // debug
   background-color: aqua;
+
+  main {
+    height: 120px;
+  }
 }
 </style>
