@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+@mixin flex-start {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
 @mixin flex-columns {
     display: flex;
     flex-direction: column;

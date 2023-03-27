@@ -36,9 +36,9 @@ export default {
             <button class="sign-up">SIGN-UP NOW</button>
         </div>
         <div class="wrapper">
-            <h2>FOLLOW US</h2>
             <div class="socials">
-                <img class="icon" v-for="(icon, i) in icons" :src="getImagePath(icon.icon)">
+                <h2>FOLLOW US</h2>
+                <a href=""><img class="icon" v-for="(icon, i) in icons" :src="getImagePath(icon.icon)"></a>
             </div>
         </div>
 
@@ -56,7 +56,38 @@ export default {
     @include mixins.flex-around;
 
     .wrapper {
-        width: 30%;
+        width: 100%;
+        @include mixins.flex-around;
+
+        .socials {
+            @include mixins.flex-start;
+        }
+
+
+        .sign-up {
+            background-color: transparent;
+            border: 3px solid variables.$tertiary-color;
+            color: variables.$primary-color;
+            height: 80%;
+            padding: 20px;
+
+            &:hover {
+                background-color: lighten(variables.$secondary-color, $amount: 10);
+                transition: background-color 0.5s ease-in-out;
+            }
+
+            &:active {
+                background-color: lighten(variables.$tertiary-color, $amount: 10);
+                transition: background-color 0.5s ease-in-out;
+            }
+
+            cursor: pointer;
+        }
+
+        h2 {
+            color: variables.$tertiary-color;
+            font-size: 18px;
+        }
     }
 
     .icon {
