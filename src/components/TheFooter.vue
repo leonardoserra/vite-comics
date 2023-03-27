@@ -87,8 +87,10 @@ export default {
                         text-decoration: none;
 
                         &:hover {
+                            color: lighten(variables.$secondary-color, $amount: 30);
                             border-bottom: 1px solid lighten(variables.$tertiary-color, $amount: 10);
-                            transition: border-bottom 0.03s linear;
+                            transition: border-bottom 0.5s linear;
+                            transition: color .5s linear;
                         }
                     }
                 }
