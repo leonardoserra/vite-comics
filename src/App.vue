@@ -2,11 +2,13 @@
 import TheHeader from "./components/TheHeader.vue";
 import TheFooter from "./components/TheFooter.vue";
 import Banner from "./components/Banner.vue";
+import BannerBonus from "./components/BannerBonus.vue";
 
 export default {
   components: {
     TheHeader,
     TheFooter,
+    BannerBonus,
     Banner
   },
   data() {
@@ -29,6 +31,7 @@ export default {
     Verra Aggiunto il Contenuto
 
   </main>
+  <BannerBonus />
   <TheFooter />
   <Banner />
 </template>
@@ -40,6 +43,7 @@ body {
 
   main {
     height: 120px;
+    color: white;
   }
 }
 </style>
