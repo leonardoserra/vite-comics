@@ -1,8 +1,8 @@
+<script>
 import TheHeader from "./components/TheHeader.vue";
 import TheFooter from "./components/TheFooter.vue";
 import Banner from "./components/Banner.vue";
 
-<script>
 export default {
   components: {
     TheHeader,
