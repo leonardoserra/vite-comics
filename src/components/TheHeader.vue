@@ -55,7 +55,8 @@ export default {
         <img class="logo" src="../assets/img/dc-logo.png" alt="logo" />
         <nav class="navbar-menu">
             <ol class="categories">
-                <li><a href="">ciao</a></li>
+                <li v-for="(links, i) in navbarSections" key="i"><a :href="'href'">{{ links.category }}</a>
+                </li>
             </ol>
         </nav>
     </div>
@@ -77,6 +78,7 @@ export default {
     }
 
     .categories {
+        @include mixins.flex-around;
         list-style: none;
 
         li {
@@ -93,7 +95,6 @@ export default {
                     color: variables.$tertiary-color;
                     border-bottom: 5px solid lighten(variables.$tertiary-color, $amount: 15);
                     transition: color .5s ease, border-bottom .03s linear;
-                    text-decoration: underline;
                 }
             }
         }
