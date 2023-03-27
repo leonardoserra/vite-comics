@@ -67,10 +67,16 @@ export default {
 
 
 
+        a {
+            margin-left: 5px;
+            text-decoration: none;
+            color: $primary-color;
 
-        .title {
-            font-size: .7rem;
-            font-weight: 400;
+            .title {
+                font-size: .7rem;
+                font-weight: 400;
+            }
+
         }
     }
 }
