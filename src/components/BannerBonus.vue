@@ -61,16 +61,14 @@ export default {
         margin: 0 35px;
         color: $primary-color;
 
+
         &:last-child img {
             height: 20%;
         }
 
         img {
             height: 30%;
-
         }
-
-
 
         a {
             margin-left: 5px;
