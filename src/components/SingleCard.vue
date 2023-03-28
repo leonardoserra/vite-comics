@@ -32,22 +32,23 @@ export default {
 
     width: calc(100% / 6 - 10px);
     height: calc(80vw / 6 - 10px);
+    margin: 5px;
 
     .img-container {
-        height: 90%;
-        width: 90%;
-        padding: 15px;
+        height: 150px;
+        width: 150px;
+        margin-bottom: 5px;
 
         img {
-            height: 90%;
-            width: 90%;
+            height: 100%;
+            width: 100%;
             object-fit: cover;
         }
 
     }
 
     .title {
-        padding: 0 15px;
+        // padding: 0 15px;
         color: $primary-color;
     }
 }

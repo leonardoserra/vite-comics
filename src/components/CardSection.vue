@@ -114,6 +114,7 @@ export default {
     position: relative;
 
     .current-series {
+        font-size: 0.8rem;
         position: absolute;
         top: -20px;
         left: 20%;
@@ -123,11 +124,24 @@ export default {
 
     .load-more {
         @include mixins.blue-text-white;
-        height: 40px;
+        height: 30px;
+        width: 200px;
         position: absolute;
         bottom: 20px;
         left: 50%;
+        border: none;
         transform: translateX(-50%);
+
+        &:hover {
+            box-shadow: 0 0 25px rgb(166, 166, 166);
+            transition: box-shadow 0.3s ease-in-out;
+
+        }
+
+        &:active {
+            transition: background-color 0.2s ease-in-out;
+            background-color: lighten($tertiary-color, $amount: 15);
+        }
     }
 
     .container {
