@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "Banner",
+    name: "BannerBottom",
     data() {
         return {
             icons: [
