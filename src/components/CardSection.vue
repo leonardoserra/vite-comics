@@ -94,13 +94,18 @@ export default {
 
 <template>
     <div class="wrapper">
-        <SingleCard v-for="(comic, i) in comics" :thumb="comic.thumb" :series="comic.series" />
+        <SingleCard v-for="(comic, i) in comics" :key="i" :thumb="comic.thumb" :series="comic.series" />
     </div>
 </template>
 
 
 <style scoped lang="scss">
+@use "../styles/partials/_mixins.scss";
+@use "../styles/partials/_variables.scss" as*;
+
 .wrapper {
+    @include mixins.flex-center;
     height: 580px;
+    background-color: $primary-color;
 }
 </style>
