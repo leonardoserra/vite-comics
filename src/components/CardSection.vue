@@ -104,7 +104,7 @@ export default {
 @use "../styles/partials/_variables.scss" as*;
 
 .wrapper {
-    @include mixins.flex-center;
+    @include mixins.flex-center-wrap;
     height: 580px;
     background-color: $primary-color;
 }

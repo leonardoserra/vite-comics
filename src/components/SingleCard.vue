@@ -1,12 +1,14 @@
 <script>
 export default {
     name: "SingleCard",
+    app() {
+        return {
+
+        }
+    },
     props: {
         thumb: String,
         series: String
-    },
-    methods: {
-
     }
 }
 
