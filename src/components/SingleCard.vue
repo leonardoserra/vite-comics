@@ -15,8 +15,10 @@ export default {
 </script>
 
 <template>
-    <div class="wrapper">
-        <img :src="thumb" :alt="series">
+    <div class="card">
+        <div class="img-container">
+            <img :src="thumb" :alt="series">
+        </div>
         <div class="title">{{ series }}</div>
     </div>
 </template>
@@ -26,15 +28,21 @@ export default {
 @use "../styles/partials/_variables.scss" as*;
 
 
-.wrapper {
-    height: calc(100% / 2 - 20px);
-    margin: 10px;
-    width: calc(100% / 6 - 20px);
-    background-color: white;
+.card {
+    width: calc(100vw / 6 - 10px);
+    height: calc(100vw / 6);
 
-    img {
-        margin-bottom: 5px;
+    .img-container {
+        height: 100%;
         width: 100%;
+        padding: 15px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
     }
 
     .title {
