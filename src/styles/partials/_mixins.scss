@@ -1,3 +1,5 @@
+@use "./_variables.scss" as*;
+
 @mixin flex-around {
     display: flex;
     justify-content: space-around;
@@ -12,8 +14,8 @@
 
 @mixin flex-center-wrap {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     flex-wrap: wrap;
 }
 
@@ -33,4 +35,10 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+@mixin blue-text-white {
+    background-color: $tertiary-color;
+    padding: 7px 12px;
+    color: $primary-color;
 }

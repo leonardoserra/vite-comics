@@ -94,7 +94,13 @@ export default {
 
 <template>
     <div class="wrapper">
-        <SingleCard v-for="(comic, i) in comics" :key="i" :thumb="comic.thumb" :series="comic.series" />
+        <div class="current-series">
+            <h2>CURRENT SERIES</h2>
+        </div>
+        <div class="container">
+            <SingleCard v-for="(comic, i) in comics" :key="i" :thumb="comic.thumb" :series="comic.series" />
+            <button class="load-more">LOAD MORE</button>
+        </div>
     </div>
 </template>
 
@@ -104,7 +110,33 @@ export default {
 @use "../styles/partials/_variables.scss" as*;
 
 .wrapper {
-    @include mixins.flex-center-wrap;
     height: 580px;
+    position: relative;
+
+    .current-series {
+        position: absolute;
+        top: -20px;
+        left: 20%;
+        @include mixins.blue-text-white;
+
+    }
+
+    .load-more {
+        @include mixins.blue-text-white;
+        height: 40px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .container {
+        @include mixins.flex-center-wrap;
+        padding-top: 50px;
+        width: 80vw;
+        height: 100%;
+        margin: auto;
+
+    }
 }
 </style>

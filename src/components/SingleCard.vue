@@ -29,23 +29,25 @@ export default {
 
 
 .card {
-    width: calc(100vw / 6 - 10px);
-    height: calc(100vw / 6);
+
+    width: calc(100% / 6 - 10px);
+    height: calc(80vw / 6 - 10px);
 
     .img-container {
-        height: 100%;
-        width: 100%;
+        height: 90%;
+        width: 90%;
         padding: 15px;
 
         img {
-            height: 100%;
-            width: 100%;
+            height: 90%;
+            width: 90%;
             object-fit: cover;
         }
 
     }
 
     .title {
+        padding: 0 15px;
         color: $primary-color;
     }
 }
